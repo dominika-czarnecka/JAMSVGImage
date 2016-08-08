@@ -55,6 +55,9 @@
 		63D2068318EF501F00FAC851 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D2068218EF501F00FAC851 /* main.m */; };
 		63D2068718EF501F00FAC851 /* JAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D2068618EF501F00FAC851 /* JAMAppDelegate.m */; };
 		63D2069218EF501F00FAC851 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D2069118EF501F00FAC851 /* Images.xcassets */; };
+		CEEE9AE71D59233800923A62 /* bg.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEEE9AE61D59233800923A62 /* bg.svg */; };
+		CEEE9AE91D59234100923A62 /* face.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEEE9AE81D59234100923A62 /* face.svg */; };
+		CEEE9AEB1D59239000923A62 /* face_2.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEEE9AEA1D59239000923A62 /* face_2.svg */; };
 		EB5881E019D5CE2900797A2E /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5881DF19D5CE2900797A2E /* Launch.xib */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +124,9 @@
 		63D2068518EF501F00FAC851 /* JAMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAMAppDelegate.h; sourceTree = "<group>"; };
 		63D2068618EF501F00FAC851 /* JAMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAMAppDelegate.m; sourceTree = "<group>"; };
 		63D2069118EF501F00FAC851 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CEEE9AE61D59233800923A62 /* bg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bg.svg; sourceTree = "<group>"; };
+		CEEE9AE81D59234100923A62 /* face.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = face.svg; sourceTree = "<group>"; };
+		CEEE9AEA1D59239000923A62 /* face_2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = face_2.svg; sourceTree = "<group>"; };
 		EB5881DF19D5CE2900797A2E /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Launch.xib; path = ../Launch.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +186,9 @@
 		63A36B2A18EF512F00AE444E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEEE9AE61D59233800923A62 /* bg.svg */,
+				CEEE9AEA1D59239000923A62 /* face_2.svg */,
+				CEEE9AE81D59234100923A62 /* face.svg */,
 				63A36B2B18EF512F00AE444E /* JAMSVGImage */,
 			);
 			path = Classes;
@@ -386,11 +395,14 @@
 				63AD79351A3FBFF800987249 /* paths-data-07-t.svg in Resources */,
 				63AD79301A3FBFF800987249 /* paths-data-02-t.svg in Resources */,
 				631522271A55DD7600680632 /* apple.png in Resources */,
+				CEEE9AE71D59233800923A62 /* bg.svg in Resources */,
 				63AD79401A3FBFF800987249 /* paths-data-19-f.svg in Resources */,
+				CEEE9AE91D59234100923A62 /* face.svg in Resources */,
 				631522281A55DD7600680632 /* apple@2x.png in Resources */,
 				63AD793C1A3FBFF800987249 /* paths-data-15-t.svg in Resources */,
 				63AD79331A3FBFF800987249 /* paths-data-05-t.svg in Resources */,
 				63AD793D1A3FBFF800987249 /* paths-data-16-t.svg in Resources */,
+				CEEE9AEB1D59239000923A62 /* face_2.svg in Resources */,
 				6380F68D1A41110300D7C9B4 /* JAMViewController.xib in Resources */,
 				631D93ED1A6377CC00AFAF51 /* apple.svgz in Resources */,
 				63AD79381A3FBFF800987249 /* paths-data-10-t.svg in Resources */,
