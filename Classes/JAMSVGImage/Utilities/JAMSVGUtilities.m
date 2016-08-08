@@ -257,7 +257,7 @@ CGFloat magnitude(CGPoint point)
 - (UIColor *)fillColorForKey:(NSString *)key;
 {
     if (!self[key]) {
-        return [UIColor colorFromString:@"#000000"];
+        return [UIColor clearColor];//colorFromString:@"#000000"];
     }
     return [UIColor colorFromString:self[key]];
 }

@@ -14,19 +14,22 @@
 
 @implementation JAMViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSString* path = [[NSBundle mainBundle]pathForResource:@"tiger" ofType:@"svg"];
+    JAMSVGImage* img = [JAMSVGImage imageWithContentsOfFile:path];
+    JAMSVGImageView* view = [[JAMSVGImageView alloc] initWithSVGImage:img];
+    
+    [self.view addSubview:view];
+}
+
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 {
-    self.svgImageView.center = CGPointAddPoints(self.svgImageView.center, [touches.anyObject previousTouchDeltaInView:self.view]);
+
 }
 
 - (IBAction)sliderSlid:(UISlider *)sender
 {
-    CGPoint center = self.svgImageView.center;
-    CGRect frame = self.svgImageView.frame;
-    frame.size.width = sender.value;
-    frame.size.height = sender.value;
-    self.svgImageView.frame = frame;
-    self.svgImageView.center = center;
 }
 
 - (IBAction)buttonTapped:(UIButton *)sender;

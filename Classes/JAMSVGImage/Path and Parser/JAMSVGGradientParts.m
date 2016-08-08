@@ -57,6 +57,32 @@
 
 - (void)drawInContext:(CGContextRef)context
 {
+    //TODO: REMOVE
+    
+    
+//    CGGradientRef glossGradient;
+//    CGColorSpaceRef rgbColorspace;
+//    size_t num_locations = 2;
+//    CGFloat locations[2] = { 0.0, 1.0 };
+//    CGFloat components[8] = { 1.0, 1.0, 1.0, 0.35,  // Start color
+//        1.0, 1.0, 1.0, 0.06 }; // End color
+//    
+//    rgbColorspace = CGColorSpaceCreateDeviceRGB();
+//    glossGradient = CGGradientCreateWithColorComponents(rgbColorspace, components, locations, num_locations);
+//    
+//        if (self.gradientType == JAMSVGGradientTypeRadial) {
+//            JAMSVGRadialGradient *radialGradient = (JAMSVGRadialGradient *)self;
+//            CGContextDrawRadialGradient(context, glossGradient, radialGradient.position, 0.f, radialGradient.position, radialGradient.radius, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+//        } else if (self.gradientType == JAMSVGGradientTypeLinear) {
+//            JAMSVGLinearGradient *linearGradient = (JAMSVGLinearGradient *)self;
+//            CGContextDrawLinearGradient(context, glossGradient, linearGradient.startPosition, linearGradient.endPosition, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+//        }
+//    
+//    CGGradientRelease(glossGradient);
+//    CGColorSpaceRelease(rgbColorspace);
+//    return;
+    
+    //END
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     NSMutableArray *colors = NSMutableArray.new;
     CGFloat locations[self.colorStops.count];
@@ -65,6 +91,7 @@
         CGFloat location = ((JAMSVGGradientColorStop *)self.colorStops[[self.colorStops indexOfObject:stop]]).position;
         locations[[self.colorStops indexOfObject:stop]] = location;
     }
+    
     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFMutableArrayRef)colors, locations);
     
     if (self.gradientTransform) {

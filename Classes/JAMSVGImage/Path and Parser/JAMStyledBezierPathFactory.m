@@ -91,15 +91,19 @@
     }
     UIColor *stopColor;
     if (attributes[@"stop-color"]) {
-        stopColor = [UIColor colorFromString:attributes[@"stop-color"]];
+        NSString* color = [attributes[@"stop-color"] componentsSeparatedByString:@";"].firstObject;
+        stopColor = [UIColor colorFromString:color];
         if (attributes[@"stop-opacity"]) {
             stopColor = [stopColor colorWithAlphaComponent:[attributes[@"stop-opacity"] floatValue]];
         }
     } else if (attributes[@"style"]) {
         stopColor = [self parseStyleColor:attributes[@"style"]];
     }
+    if (stopColor == nil) {
+        
+    }
     colorStop.color = stopColor;
-    [((JAMSVGGradient *)self.gradients.lastObject).colorStops addObject:colorStop];
+        [((JAMSVGGradient *)self.gradients.lastObject).colorStops addObject:colorStop];
 }
 
 - (void)addGroupOpacityValueWithAttributes:(NSDictionary *)attributes;
@@ -168,7 +172,9 @@
     UIColor *color;
     NSScanner *colorScanner = [NSScanner scannerWithString:styleColor];
     if ([colorScanner scanString:@"stop-color:" intoString:NULL]) {
-        color = [UIColor colorFromString:[styleColor substringFromIndex:colorScanner.scanLocation]];
+        
+        NSString* colorStr = [[styleColor substringFromIndex:colorScanner.scanLocation]componentsSeparatedByString:@";"].firstObject;
+        color = [UIColor colorFromString:colorStr];
     };
     if ([colorScanner scanUpToString:@"stop-opacity:" intoString:NULL]) {
         [colorScanner scanString:@"stop-opacity:" intoString:NULL];

@@ -84,11 +84,13 @@
         CGContextSetAlpha(context, self.opacity.floatValue);
     }
     if (self.gradient) {
+        CGContextSaveGState(context);
         CGContextAddPath(context, self.path.CGPath);
         CGContextClip(context);
         [self.gradient drawInContext:context];
         CGContextRestoreGState(context);
-    } else if (self.fillColor) {
+    } else
+        if (self.fillColor) {
         CGContextSetFillColorWithColor(context, self.fillColor.CGColor);
         CGContextAddPath(context, self.path.CGPath);
         CGContextFillPath(context);
