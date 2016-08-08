@@ -69,7 +69,6 @@
 		82B374FF1C34135200A9D8F4 /* JAMSVGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA8DFB1A426F870095ECF3 /* JAMSVGUtilities.m */; };
 		82B375021C3414D500A9D8F4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B375011C3414D500A9D8F4 /* libz.tbd */; };
 		82B375041C3414DD00A9D8F4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B375031C3414DD00A9D8F4 /* libz.tbd */; };
-		82B375071C3417F600A9D8F4 /* JAMSVGImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B374951C34110E00A9D8F4 /* JAMSVGImage.framework */; };
 		82B375081C34185800A9D8F4 /* JAMSVGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A36B3018EF512F00AE444E /* JAMSVGImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82B375091C34185800A9D8F4 /* UIImage+SVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 630A5D2E1A637DA90051D2D5 /* UIImage+SVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82B3750A1C34185800A9D8F4 /* JAMSVGImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A36B3818EF67A300AE444E /* JAMSVGImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +92,9 @@
 		82B375261C34225800A9D8F4 /* JAMSVGGradientParts.h in Headers */ = {isa = PBXBuildFile; fileRef = 638E660518F39529007A2EAA /* JAMSVGGradientParts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82B375271C3423CA00A9D8F4 /* Framework_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B374A31C34110F00A9D8F4 /* Framework_Tests.swift */; };
 		82B375291C3424DD00A9D8F4 /* JAMSVGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA8DFA1A426F870095ECF3 /* JAMSVGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEEE9AEC1D59274200923A62 /* JAMSVGImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B374951C34110E00A9D8F4 /* JAMSVGImage.framework */; };
+		CEEE9AEE1D59283E00923A62 /* face_2.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEEE9AED1D59283E00923A62 /* face_2.svg */; };
+		CEEE9AF01D5928FF00923A62 /* bg.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEEE9AEF1D5928FF00923A62 /* bg.svg */; };
 		EB5881E019D5CE2900797A2E /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5881DF19D5CE2900797A2E /* Launch.xib */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +211,8 @@
 		82B375051C3414E200A9D8F4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		82B375181C341D1F00A9D8F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		82B375281C34246D00A9D8F4 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		CEEE9AED1D59283E00923A62 /* face_2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = face_2.svg; sourceTree = "<group>"; };
+		CEEE9AEF1D5928FF00923A62 /* bg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bg.svg; sourceTree = "<group>"; };
 		EB5881DF19D5CE2900797A2E /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Launch.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -217,7 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B375071C3417F600A9D8F4 /* JAMSVGImage.framework in Frameworks */,
+				CEEE9AEC1D59274200923A62 /* JAMSVGImage.framework in Frameworks */,
 				63D2067918EF501F00FAC851 /* CoreGraphics.framework in Frameworks */,
 				63D2067B18EF501F00FAC851 /* UIKit.framework in Frameworks */,
 				63D2067718EF501F00FAC851 /* Foundation.framework in Frameworks */,
@@ -302,6 +306,8 @@
 		63A36B2A18EF512F00AE444E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEEE9AEF1D5928FF00923A62 /* bg.svg */,
+				CEEE9AED1D59283E00923A62 /* face_2.svg */,
 				63A36B2B18EF512F00AE444E /* JAMSVGImage */,
 				82B375111C3419C400A9D8F4 /* Supporting Files */,
 			);
@@ -681,6 +687,7 @@
 				63AD793C1A3FBFF800987249 /* paths-data-15-t.svg in Resources */,
 				63AD79331A3FBFF800987249 /* paths-data-05-t.svg in Resources */,
 				63AD793D1A3FBFF800987249 /* paths-data-16-t.svg in Resources */,
+				CEEE9AF01D5928FF00923A62 /* bg.svg in Resources */,
 				6380F68D1A41110300D7C9B4 /* JAMViewController.xib in Resources */,
 				631D93ED1A6377CC00AFAF51 /* svg in Resources */,
 				63AD79381A3FBFF800987249 /* paths-data-10-t.svg in Resources */,
@@ -701,6 +708,7 @@
 				631522251A55DD7600680632 /* apple@2x.jpg in Resources */,
 				63AD79391A3FBFF800987249 /* paths-data-12-t.svg in Resources */,
 				631522291A55DD7600680632 /* apple@3x.png in Resources */,
+				CEEE9AEE1D59283E00923A62 /* face_2.svg in Resources */,
 				63D2068118EF501F00FAC851 /* InfoPlist.strings in Resources */,
 				63AD792F1A3FBFF800987249 /* paths-data-01-t.svg in Resources */,
 				63AD79371A3FBFF800987249 /* paths-data-09-t.svg in Resources */,
@@ -1156,6 +1164,7 @@
 				82B374A71C34110F00A9D8F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82B374AB1C34110F00A9D8F4 /* Build configuration list for PBXNativeTarget "JAMSVGImage iOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1164,6 +1173,7 @@
 				82B374A91C34110F00A9D8F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82B374C21C3411A900A9D8F4 /* Build configuration list for PBXNativeTarget "JAMSVGImage tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1172,6 +1182,7 @@
 				82B374C41C3411A900A9D8F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82B374C51C3411A900A9D8F4 /* Build configuration list for PBXNativeTarget "JAMSVGImage tvOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1180,6 +1191,7 @@
 				82B374C71C3411A900A9D8F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

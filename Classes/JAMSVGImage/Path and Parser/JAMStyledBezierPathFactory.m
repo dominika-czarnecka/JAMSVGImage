@@ -91,7 +91,8 @@
     }
     UIColor *stopColor;
     if (attributes[@"stop-color"]) {
-        stopColor = [UIColor colorFromString:attributes[@"stop-color"]];
+        NSString* colorStr = [attributes[@"stop-color"] componentsSeparatedByString:@";"].firstObject;
+        stopColor = [UIColor colorFromString:colorStr];
         if (attributes[@"stop-opacity"]) {
             stopColor = [stopColor colorWithAlphaComponent:[attributes[@"stop-opacity"] floatValue]];
         }
@@ -168,7 +169,9 @@
     UIColor *color;
     NSScanner *colorScanner = [NSScanner scannerWithString:styleColor];
     if ([colorScanner scanString:@"stop-color:" intoString:NULL]) {
-        color = [UIColor colorFromString:[styleColor substringFromIndex:colorScanner.scanLocation]];
+        
+        NSString* colorStr = [[styleColor substringFromIndex:colorScanner.scanLocation]componentsSeparatedByString:@";"].firstObject;
+        color = [UIColor colorFromString:colorStr];
     };
     if ([colorScanner scanUpToString:@"stop-opacity:" intoString:NULL]) {
         [colorScanner scanString:@"stop-opacity:" intoString:NULL];

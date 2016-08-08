@@ -14,6 +14,22 @@
 
 @implementation JAMViewController
 
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    NSArray* titles = @[ @"bg", @"tiger", @"face_2"];
+    
+    for (NSString* title in titles) {
+        
+        NSString* path = [[NSBundle mainBundle]pathForResource:title ofType:@"svg"];
+        JAMSVGImage* img = [JAMSVGImage imageWithContentsOfFile:path];
+        JAMSVGImageView* view = [[JAMSVGImageView alloc] initWithSVGImage:img];
+        [self.view addSubview:view];
+        
+    }
+}
+
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 {
     self.svgImageView.center = CGPointAddPoints(self.svgImageView.center, [touches.anyObject previousTouchDeltaInView:self.view]);
