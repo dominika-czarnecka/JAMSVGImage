@@ -15,7 +15,6 @@
 
 @interface JAMStyledBezierPath ()
 @property (nonatomic) UIBezierPath *path;
-@property (nonatomic) UIColor *fillColor;
 @property (nonatomic) UIColor *strokeColor;
 @property (nonatomic) JAMSVGGradient *gradient;
 @property (nonatomic) NSArray *affineTransforms;

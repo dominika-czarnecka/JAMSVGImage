@@ -17,6 +17,8 @@
 /** The JAMStyledBezierPath class encapsulates a UIBezierPath object and styling information (fill, stroke, gradient, affine transforms, and opacity.) */
 @interface JAMStyledBezierPath : NSObject <NSCoding>
 
+@property (nonatomic) UIColor *fillColor;
+
 /** Styled path creation */
 + (instancetype)styledPathWithPath:(UIBezierPath *)path
                          fillColor:(UIColor *)fillColor
