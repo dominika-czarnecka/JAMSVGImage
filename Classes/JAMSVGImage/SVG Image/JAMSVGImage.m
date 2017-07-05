@@ -16,7 +16,6 @@
 
 @interface JAMSVGImage ()
 @property (nonatomic, readwrite) CGSize size;
-@property (nonatomic) NSArray *styledPaths;
 @property (nonatomic) CGRect viewBox;
 @end
 

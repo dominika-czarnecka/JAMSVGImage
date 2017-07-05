@@ -22,6 +22,8 @@
 /** Scale at which the SVG image will be drawn. Default is 1.0. */
 @property (nonatomic) CGFloat scale;
 
+@property (nonatomic, readwrite) NSArray *styledPaths;
+
 /** Returns a CGImageRef or UIImage of the SVG image at the current scale. */
 - (CGImageRef)CGImage;
 - (UIImage *)image;
